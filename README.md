@@ -36,9 +36,11 @@ Check out the interactive web application here:
 ### 🛠️ Challenges & Technical Evolution (The "War Stories")
 Building this wasn't easy. I faced several critical issues that required deep troubleshooting:
 
-1. **The "Ghosting" Cache Issue:** Initially, when deploying on Hugging Face, the model would get stuck on the first uploaded image and wouldn't update for the second one. I solved this by forcing a memory refresh using `np.copy()` and restructuring the Gradio interface to clear the state between sessions.
-2. **X-ray Format Conflicts:** Standard X-rays are often Grayscale (1-channel), but the model was trained on RGB (3-channels). This caused the server to crash with "Internal Server Errors." I fixed this by implementing an explicit `.convert('RGB')` layer in the preprocessing pipeline.
-3. **From FastAPI to Gradio:** I started with a FastAPI backend for logging and request history in SQLite, but for a better user experience, I migrated the final UI to **Gradio Blocks**. This allowed for a more interactive and visually appealing "Label-based" result view.
+**The Accuracy Plateau & Data Quality**: Initially, the model's accuracy was stuck and wouldn't improve. I realized the original dataset had inconsistent labeling and low-quality X-rays. I pivoted by performing a complete data audit, cleaning the noise, and integrating a higher-quality, balanced dataset to ensure the model actually learned features instead of just memorizing patterns.
+
+**The Preprocessing Pivot**: One of the biggest hurdles was handling the diverse formats of medical X-rays. I had to build a custom Preprocessing Pipeline that standardized image intensity and resized inputs without losing the fine details of the dental caries. This step was the turning point for the model's performance.
+
+**Architectural Fine-Tuning**: Moving beyond a basic CNN, I experimented with different layer depths and activation functions to find the "Sweet Spot" that could handle the subtle textures of X-ray images. This optimization was crucial for achieving high precision in detecting early-stage caries.
 
 ---
 
