@@ -45,7 +45,7 @@ Building this wasn't easy. I faced several critical issues that required deep tr
 ## 🖼️ Application Interface
 Below is a look at the final working application in action:
 
-![Dental AI Screenshot](screenshot.PNG)
+![Dental AI Screenshot](screenshot.png)
 
 ---
 
