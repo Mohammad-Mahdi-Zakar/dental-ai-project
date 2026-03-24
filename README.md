@@ -4,7 +4,7 @@ An end-to-end Deep Learning project designed to detect dental tooth decay from X
 
 ## 🚀 Live Demo
 Check out the interactive web application here:
-**[Insert Your Hugging Face Space Link Here]**
+**(https://mohammad-mahdi-zakar-dental-caries-final.hf.space)**
 
 ---
 
@@ -45,7 +45,7 @@ Building this wasn't easy. I faced several critical issues that required deep tr
 ## 🖼️ Application Interface
 Below is a look at the final working application in action:
 
-![Dental AI Screenshot](screenshot.png)
+![Dental AI Screenshot](screenshot.PNG)
 
 ---
 
