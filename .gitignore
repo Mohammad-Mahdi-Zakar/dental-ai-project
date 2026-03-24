@@ -1,0 +1,17 @@
+# 1. تجاهل كل ملفات الداتا والصور
+data/
+dental_data/
+*.zip
+*.jpg
+*.png
+*.jpeg
+
+# 2. تجاهل الموديلات التقيلة (عشان ما يعلق الـ GitHub)
+models/*.h5
+models/*.keras
+
+# 3. تجاهل ملفات النظام والـ Notebooks المؤقتة
+.ipynb_checkpoints/
+__pycache__/
+.env
+.vscode/
